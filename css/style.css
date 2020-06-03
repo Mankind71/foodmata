@@ -1,0 +1,161 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    color: #304011;
+}
+.navbar{
+    padding: 0.1rem 3rem;
+}
+.navbar-nav li{
+    padding-right: 20px;
+}
+.nav-link{
+    font-size: 1.3rem;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #304011;
+}
+.nav-link:hover{
+    color: #ee5500 !important;
+    cursor: pointer;
+}
+.carousel-inner .carousel-item img {
+    margin-left: 10%;
+    margin-bottom: 5px;
+    width: 80%;
+}
+.jumbotron{
+    /* background-color: #304011; */
+    padding: 2rem;
+    width: 80%;
+    font-size: 1.3rem;
+    margin: 2% 10%;
+    background-color: #ee5500;
+    color: white;
+}
+.modes p{
+    color: rgba(141, 53, 189, 0.932);
+    cursor: pointer;
+}
+.modes p:hover{
+    text-decoration: underline;
+}
+.bold h3 {
+    padding-left: 10%;
+    font-size: 150%;
+}
+div a button{
+    width: 100%;   
+}
+.grey{
+    text-align: center;
+    padding: 20px;
+    margin: 0 4% 2%;
+    background-color: rgba(211, 211, 211, 0.336);
+}
+.hilight{
+    color: #304011;
+    font-size: 130%;
+}
+.bigger{
+    font-size: 130%;
+    color: #ee5500;
+}
+.hr{
+    margin-bottom: 30px;
+    width: 60%;
+    border-top: solid #304011 1px;
+
+
+}
+.times{
+    color: #ee5500;
+    font-size: 1.5rem;
+}
+
+
+footer{
+    background-color: #ee5500;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+.light{
+    border-top: 1px solid #30401181;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+footer a{
+    color: darkgrey;
+}
+.social a{
+    font-size: 2.5rem;
+    padding: 1rem;
+    width: 10px;
+}
+.social a:hover{
+    color: #d5d5d5;
+}
+.social a, .modes p, .nav-link{
+    transition: all 1s;
+}
+.social a:hover, .modes p:hover, .nav-link:hover{
+    transform: scale(1.1);
+}
+div h5{
+    margin: 1.2rem 0 0;
+}
+.num, .fa-whatsapp{
+    font-size: 2rem;
+}
+.light-100{
+    border-top: 1px solid #30401181;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+
+@media only screen and (min-width: 576px){
+    .nav-link{
+        font-size: 1.1rem;
+    }   
+}
+@media only screen and (min-width: 768px){
+    .navbar{
+        padding: 0.1rem 1rem;
+    }
+    .nav-link{
+        font-size: 1.1rem;
+    }
+    .jumbotron{
+        padding: 2rem;
+    }
+    .carousel-inner .carousel-item img {
+        margin-left: 20%;
+        margin-bottom: 5px;
+        width: 60%;
+    }
+    .bold h3 {
+        font-size: 180%;
+    }
+    .bigger{
+        font-size: 150%;
+    }
+}
+@media(min-width: 992px){
+    .nav-link{
+        font-size: 1.5rem;
+    }
+}
+/* Firefox Bug Fix */
+.carousel-item {
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
