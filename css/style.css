@@ -1,13 +1,23 @@
+@font-face {
+    font-family: 'Fruity-Stories';
+    src:url('./fruity/Fruity-Stories.ttf.woff') format('woff'),
+     url('./fruity/Fruity-Stories.ttf.svg#Fruity-Stories') format('svg'),
+     url('Fruity-Stories.ttf.eot'),
+     url('Fruity-Stories.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body{
     height: 100%;
     width: 100%;
     font-family: sans-serif;
     font-size: 1.1rem;
-    padding: 0 1rem;
     color: #304011;
 }
 .navbar{
-    padding: 0.1rem 3rem;
+    padding: 0.1rem 1rem;
+    /* padding-left: 0%; */
 }
 .navbar-nav li{
     padding-right: 20px;
@@ -29,25 +39,17 @@ html, body{
 }
 .jumbotron{
     /* background-color: #304011; */
-    padding: 2rem;
+    padding: 2rem 1rem;
     width: 80%;
     font-size: 1.3rem;
     margin: 2% 10%;
     background-color: #ee5500;
     color: white;
 }
-.modes p{
-    color: rgba(141, 53, 189, 0.932);
-    cursor: pointer;
+.jumbotron .bold{
+   margin-bottom: 10px;
 }
-.modes p:hover{
-    text-decoration: underline;
-}
-.bold h3 {
-    padding-left: 10%;
-    font-size: 150%;
-}
-div a button{
+.order button{
     width: 100%;   
 }
 .grey{
@@ -58,28 +60,36 @@ div a button{
 }
 .hilight{
     color: #304011;
-    font-size: 130%;
+    font-size: 80%;
 }
 .bigger{
-    font-size: 130%;
+    font-family: 'Fruity-Stories';
+    font-size: 180%;
     color: #ee5500;
 }
 .hr{
     margin-bottom: 30px;
     width: 60%;
     border-top: solid #304011 1px;
-
-
+}
+.modes p{
+    color: #1a0dab;
+    cursor: pointer;
+}
+.modes p:hover{
+    text-decoration: underline;
 }
 .times{
     color: #ee5500;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
-
+.tt{
+    font-size: .9rem;
+}
 
 footer{
     background-color: #ee5500;
-    color: #d5d5d5;
+    color: white;
     padding-top: 2rem;
 }
 .light{
@@ -89,7 +99,7 @@ footer{
     margin-bottom: 1rem;
 }
 footer a{
-    color: darkgrey;
+    color: white;
 }
 .social a{
     font-size: 2.5rem;
@@ -97,12 +107,25 @@ footer a{
     width: 10px;
 }
 .social a:hover{
-    color: #d5d5d5;
+    color: #d9d9d9;
+    /* background-color: #4e4e4e; */
 }
-.social a, .modes p, .nav-link{
+.fa-facebook,
+.fa-twitter,
+.fa-instagram,
+.fa-whatsapp,
+.modes p,
+.nav-link,
+a .num{
     transition: all 1s;
 }
-.social a:hover, .modes p:hover, .nav-link:hover{
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-whatsapp:hover,
+.modes p:hover,
+.nav-link:hover,
+a .num{
     transform: scale(1.1);
 }
 div h5{
@@ -118,13 +141,22 @@ div h5{
     margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 576px){
+    .order{
+        width: 100%;
+        text-align: center;
+    }
+    .ttt{
+        font-size: .8rem;
+    }  
+}
 
 @media only screen and (min-width: 576px){
     .nav-link{
         font-size: 1.1rem;
     }   
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 767px){
     .navbar{
         padding: 0.1rem 1rem;
     }
@@ -132,8 +164,12 @@ div h5{
         font-size: 1.1rem;
     }
     .jumbotron{
-        padding: 2rem;
+        padding: 2rem 1rem;
     }
+    .jumbotron .bold h6{
+        margin: 0 2rem;
+        font-size: 1.3rem;
+     }
     .carousel-inner .carousel-item img {
         margin-left: 20%;
         margin-bottom: 5px;
@@ -142,8 +178,14 @@ div h5{
     .bold h3 {
         font-size: 180%;
     }
+    .hilight{
+        font-size: 130%;
+    }
     .bigger{
         font-size: 150%;
+    }
+    .times{
+        font-size: 1.5rem;
     }
 }
 @media(min-width: 992px){
