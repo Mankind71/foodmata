@@ -4,11 +4,13 @@
   <title>Foodmata</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./img/FoodMata_Icon_transparent.png" type="image/x-icon">
   <link rel="stylesheet" href="scripts/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <!-- Navigation -->
+<div class="body container-fluid">
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <div class="container-fluid">
     <a href="#" class="navbar-brand"><img src="./img/FoodMata_Logo_Transparent.png"></a>
@@ -19,7 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" active>
-          <a href="#" class="nav-link"><i class="fas fa-home"></i>Home</a>
+          <a href="#" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
           <a href="#about" class="nav-link">About</a>
@@ -58,83 +60,129 @@
 <!-- Jumbotron -->
 <div class="container-fluid">
     <div class="row jumbotron">
-      <div class="bold col-xs-8 col-sm-8 col-lg-9">
+      <div class="bold col-xs-8 col-sm-6">
         <h6>Open for your Orders.</h6>
       </div>
-      <div class='order'>
-        <a href="https://wa.me/2347046121391?text=Hello,%20I%20would%20like%20to%20make%20an%20order" target="_blank"><button type="button" class="btn btn-outline-light btn-lg">Order Now</button></a>
+      <div class='order ml-auto'>
+        <a data-toggle="modal" data-target="#Details" target="_blank"><button type="button" class="btn btn-outline-light btn-lg">Order Now</button></a>
       </div>
     </div>
   </div>
   
 <!-- About Us -->
 <div class="row">
-<div class='col-lg-5 grey' id="about">
+  <div class='col-lg-5 grey' id="about">
   <h2 class="hilight">WE HELP YOU <span class="bigger"><br> GET YOUR MEALS <br></span>FROM</h2>
   <hr class="hr">
   <div class="row modes">
-    <div class='col-xs-12 col-sm-6'>
-      <p><a data-toggle="modal" data-target="#myFoods">Chicken Republic</a></p>
-      <p><a data-toggle="modal" data-target="#myFoods">Shoprite</a></p>
-      <p><a data-toggle="modal" data-target="#myFoods">Amala Village</a></p>
-      <p><a data-toggle="modal" data-target="#myFoods">Fingerlicking</a></p>
+    <div class='col-md-6'>
+      <p id="shop"><a data-toggle="modal" data-target="#Shoprite">Shoprite</a></p>
+      <p id="chick"><a data-toggle="modal" data-target="#chicken">Chicken Republic</a></p>
+      <p id="dom"><a data-toggle="modal" data-target="#Dominoes">Dominoes</a></p>
+      <p id="cold"><a data-toggle="modal" data-target="#Coldstone">Coldstone</a></p>
     </div>
-    <div class='col-xs-12 col-sm-6'>
-      <p><a data-toggle="modal" data-target="#myFoods">Pounded Yam Village</a></p>
-      <p><a data-toggle="modal" data-target="#myFoods">Mandate Restaurant</a></p>
-      <p><a data-toggle="modal" data-target="#myFoods">Crunches</a></p>
-      <p><a data-toggle="modal" data-target="#myFoods">Bola Meat Restaurant</a></p>
+    <div class='hide col-md-6'>
+      <p id="pound"><a data-toggle="modal" data-target="#myFoods">Pounded Yam Village</a></p>
+      <p id="man"><a data-toggle="modal" data-target="#myFoods">Mandate Restaurant</a></p>
+      <p id="crunch"><a data-toggle="modal" data-target="#myFoods">Crunches</a></p>
+      <p id="bol"><a data-toggle="modal" data-target="#myFoods">Bola Meat Restaurant</a></p>
     </div>
   </div>
   <p>& other restaurants of your choice</p>
-</div>
-
-<div class='col-lg-5 grey ' id="services">
-  <h2 class="hilight">4 STANDARD <span class="bigger"><br> ORDER TIMELINES </span></h2>
-  <hr class="hr">
-  <div class="row">
-    <div class='col-6 times'>
-      <p>Ordering Time</p>
+  <div class="row modes">
+    <div class='hide col-md-5' style="padding-left: 3px;">
+      <img src="./img/foodmata.jpg">
     </div>
-    <div class='col-6 times'>
-      <p>Delivery Time</p>
+    <div class='hide col-md-7'>
+      <img id="secondimg" src="./img/foodmata2.jfif">
     </div>
-  </div>
-  <div class="row tt">
-    <div class='tt col-6'>
-      <p class="tt">Anytime before 8am</p>
-    </div>
-    <div class='col-6'>
-      <p class="tt">8am - 9am</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class='col-6'>
-      <p class="tt ttt">Anytime before 11am</p>
-    </div>
-    <div class='col-6'>
-      <p class="tt">11am - 12pm</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class='col-6'>
-      <p class="tt">Anytime before 2pm</p>
-    </div>
-    <div class='col-6'>
-      <p class="tt">2pm - 3pm</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class='col-6'>
-      <p class="tt">Anytime before 5pm</p>
-    </div>
-    <div class='col-6'>
-      <p class="tt">5pm - 6pm</p>
-    </div>
-  </div>
   </div>
 </div>
 
+  <div class='col-lg-5 grey ' id="services">
+    <h2 class="hilight">4 STANDARD <span class="bigger"><br> ORDER TIMELINES </span></h2>
+    <hr class="hr">
+    <div class="row">
+      <div class='col-4 times'>
+        <p class="red">Ordering Time</p>
+      </div>
+      <div class='col-8 times green'>
+        <p>Delivery Time</p>
+      </div>
+    </div>
+    <hr class="hrorder">
+    <div class="row">
+      <div class='col-4'>
+        <p class="tt red">6am - 8am</p>
+      </div>
+      <div class='col-8 green'>
+        <div class="row">
+          <div class='col-6'>
+            <p class="tt">8am - 9am</p>
+          </div>
+          <div class='col-6'>
+            <p class="tt">11am-12pm</p>
+          </div>
+          <div class='col-6'>
+            <p class="tt">2pm - 3pm</p>
+          </div>
+          <div class='col-6'>
+            <p class="tt">5pm - 6pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hrorder">
+    <div class="row">
+      <div class='col-4'>
+        <p class="tt red">8am - 11am</p>
+      </div>
+      <div class='col-8 green'>
+        <div class="row">
+          <div class='col-6'>
+            <p class="tt">11am-12pm</p>
+          </div>
+          <div class='col-6'>
+            <p class="tt">2pm - 3pm</p>
+          </div>
+          <div class='col-6'>
+            <p class="tt">5pm - 6pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hrorder">
+    <div class="row">
+      <div class='col-4'>
+        <p class="tt red">11am - 2pm</p>
+      </div>
+      <div class='col-8 green'>
+        <div class="row">
+          <div class='col-6'>
+            <p class="tt">2pm - 3am</p>
+          </div>
+          <div class='col-6'>
+            <p class="tt">5pm - 6pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hrorder">
+    <div class="row">
+      <div class='col-4'>
+        <p class="tt red">2pm- 5pm</p>
+      </div>
+      <div class='col-8 green'>
+        <div class="row">
+          <div class='col-6'>
+            <p class="tt">5pm - 6pm</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  
 <!-- Footer -->
 <footer>
 <div class="container-fluid padding">
@@ -143,19 +191,17 @@
       <hr class="light">
       <h5>Address</h5>
       <hr class="light">
-      <p>Shop 4,</p>
-      <p>Adekunle Plaza,</p>
-      <p>Northgate,</p>
-      <p>FUTA, Akure.</p>
+      <p>Shop 4, Adekunle Plaza,</p>
+      <p>Northgate, FUTA, Akure.</p>
     </div>
     <div class="col-md-4">
       <hr class="light">
       <h5>Follow Us on</h5>
       <hr class="light">
       <div class="col-12 social">
-        <a href=""><i class="fab fa-facebook"></i></a>
-        <a href=""><i class="fab fa-twitter"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href="https://web.facebook.com/foodmatahq" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/foodmatahq" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/foodmatahq/" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
       <h5>Contact Us</h5>
       <hr class="light">
@@ -183,16 +229,16 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Restaurants</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
         <div class="container-fluid">
           <div class="row modes">
-            <div class="col-sm-4"><p><a data-toggle="modal" data-target="#myFoods">Chicken Republic</a></p></div>
-            <div class="col-sm-4"><p><a data-toggle="modal" data-target="#myFoods">Shoprite</a></p></div>
-            <div class="col-sm-4"><p><a data-toggle="modal" data-target="#myFoods">Amala Village</a></p></div>
-            <div class="col-sm-4"><p><a data-toggle="modal" data-target="#myFoods">Fingerlicking</a></p></div>
+            <div class="col-sm-4"><p><a data-toggle="modal" data-target="#chicken">Chicken Republic</a></p></div>
+            <div class="col-sm-4"><p><a data-toggle="modal" data-target="#Shoprite">Shoprite</a></p></div>
+            <div class="col-sm-4"><p><a data-toggle="modal" data-target="#Dominoes">Dominoes</a></p></div>
+            <div class="col-sm-4"><p><a data-toggle="modal" data-target="#Coldstone">Coldstone</a></p></div>
             <div class="col-sm-4"><p><a data-toggle="modal" data-target="#myFoods">Pounded Yam Village</a></p></div>
             <div class="col-sm-4"><p><a data-toggle="modal" data-target="#myFoods">Crunches</a></p></div>
             <div class="col-sm-4"><p><a data-toggle="modal" data-target="#myFoods">Mandate Restaurant</a></p></div>
@@ -201,7 +247,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default"  data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -212,8 +258,8 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Kitchen Rep</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
         <div class="container-fluid">
@@ -226,17 +272,153 @@
         </div>
       </div>
       <div class="modal-footer">
-        <a href="https://wa.me/2347046121391?text=Hello,%20I%20would%20like%20to%20make%20an%20order" target="_blank" type="button" class="btn btn-primary">Order Now</a>
-        <button type="button" class="btn btn-secondary"  data-dismiss="modal">Close</button>
+        <a data-toggle="modal" data-target="#Details" target="_blank" type="button" class="btn btn-primary">Order Now</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
 
+<!--Shoprite Modal -->
+<div class="modal fade" id="Shoprite" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Shoprite</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-3 col-md-9">Fried Rice & Chicken</div>
+            <div class="col-xs-3 col-md-3">#1,365</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a data-toggle="modal" data-target="#Details" target="_blank" type="button" class="btn btn-primary">Order Now</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Chicken Rep Modal -->
+<div class="modal fade" id="chicken" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Chicken Rep</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-9 col-md-9">Chicken & Chips</div>
+            <div class="col-xs-3 col-md-3">#1,600</div>
+            <div class="col-xs-9 col-md-9">Fruit Salad</div>
+            <div class="col-xs-3 col-md-3">#200</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a data-toggle="modal" data-target="#Details" target="_blank" type="button" class="btn btn-primary">Order Now</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Dominoes Rep Modal -->
+<div class="modal fade" id="Dominoes" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Dominoes</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-9 col-md-9">Pizza</div>
+            <div class="col-xs-3 col-md-3">#3,500</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a data-toggle="modal" data-target="#Details" target="_blank" type="button" class="btn btn-primary">Order Now</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Coldstone Rep Modal -->
+<div class="modal fade" id="Coldstone" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Coldstone</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-9 col-md-6">Iced Cream . . . . <span class="cost ml-auto">#1,400</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a data-toggle="modal" data-target="#Details" target="_blank" type="button" class="btn btn-primary">Order Now</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Details Modal -->
+<div class="modal fade" id="Details" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Details</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form>
+            <div class="form-group">
+              <label for="location-name" class="col-form-label">Address:</label>
+              <input type="text" class="form-control" id="location-name" required>
+            </div>
+            <div class="form-group">
+              <label for="client-name" class="col-form-label">Name:</label>
+              <input type="text" class="form-control" id="client-name" required>
+            </div>
+            <div class="form-group">
+              <label for="restaurant-name" class="col-form-label">Restaurant:</label>
+              <input type="text" class="form-control" id="restaurant-name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone-num" class="col-form-label">Contact:</label>
+              <input type="number" class="form-control" id="phone-num" required>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" id="whatsapp" class="btn btn-primary">Order Now</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
   <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
-  <!-- <script src="scripts/jquery.min.js"></script> -->
-  <!-- <script src="scripts/popper.min.js"></script> -->
-  <!-- <script src="scripts/bootstrap.min.js"></script> -->
+  <script src="scripts/scripts.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
 </body>
 </html>
